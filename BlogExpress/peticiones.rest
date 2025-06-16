@@ -4,12 +4,17 @@
 ###
 GET {{host}}/api/autores
 
+###
+GET {{host}}/api/autores/5
 
 ###
 GET {{host}}/api/posts
 
 ###
 GET {{host}}/api/posts/5
+
+###
+GET {{host}}/api/autores/2/posts
 
 ###
 POST {{host}}/api/posts
@@ -20,6 +25,16 @@ Content-Type: application/json
     "descripcion": "Nueva descripción",
     "categoria": "Categoría",
     "autor_id": 1
+}
+
+###
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Nuevo Autor",
+    "email": "autor4@correo.com",
+    "imagen": "https://example.com/imagen.jpg"
 }
 
 

@@ -11,6 +11,7 @@ const selectById = async(postId) =>{
   return result[0]
 }
 
+
 const insert = async (titulo, descripcion, categoria, autor_id) => {
   const [result] = await db.query(
     "INSERT INTO posts (titulo, descripcion, categoria, autor_id) VALUES (?,?,?,?)",
