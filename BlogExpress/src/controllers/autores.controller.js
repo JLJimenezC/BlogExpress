@@ -22,6 +22,7 @@ const getById = async (req, res) => {
 const getPostsByAutorId = async (req, res) =>{
   const {autorId} = req.params
   const posts = await Autores.selectPostsByAutorId(autorId)
+
   res.json({
     posts
   })
@@ -31,8 +32,9 @@ const getPostsByAutorId = async (req, res) =>{
 const create = async (req, res) => {
   const { nombre, email, imagen } = req.body;
   const result = await Autores.insert(nombre, email, imagen);
+  const autor = await Autores.selectById(result.insertId)
   res.json({
-    result,
+    autor,
   });
 };
 

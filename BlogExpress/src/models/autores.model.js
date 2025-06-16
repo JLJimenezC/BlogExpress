@@ -22,11 +22,12 @@ const selectPostsByAutorId = async (autorId) => {
 };
 
 const insert = async (nombre, email, imagen) => {
-  db.query("INSERT INTO autores (nombre, email, imagen) VALUES (?,?,?)", [
+  const [result] = await db.query("INSERT INTO autores (nombre, email, imagen) VALUES (?,?,?)", [
     nombre,
     email,
     imagen,
   ]);
+  return result;
 };
 
 module.exports = { selectAll, selectById, selectPostsByAutorId, insert };

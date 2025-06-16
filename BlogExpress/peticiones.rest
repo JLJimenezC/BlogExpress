@@ -33,7 +33,7 @@ Content-Type: application/json
 
 {
     "nombre": "Nuevo Autor",
-    "email": "autor@correo.com",
+    "email": "autor4@correo.com",
     "imagen": "https://example.com/imagen.jpg"
 }
 
